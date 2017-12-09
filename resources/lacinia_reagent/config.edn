@@ -1,0 +1,14 @@
+{:duct.core/project-ns  lacinia-reagent
+ :duct.core/environment :production
+
+ :duct.module/logging {}
+ :duct.module.web/site {}
+ :duct.middleware.web/defaults
+ {:static {:resources ["lacinia_reagent/public"]}}
+ :duct.module/cljs {:main lacinia-reagent.client}
+
+ :duct.module/ataraxy
+ {[:get "/"] [:index]}
+
+ :lacinia-reagent.handler/index
+ {:graphql-endpoint "http://localhost:8888/graphql"}}
