@@ -1,7 +1,6 @@
 (ns lacinia-reagent.client.events
   (:require [re-frame.core :as re-frame]
             [lacinia-reagent.client.db :as db]
-            [reagent.format :refer [format]]
             [lacinia-reagent.client.api :refer [request]]))
 
 (re-frame/reg-event-db
